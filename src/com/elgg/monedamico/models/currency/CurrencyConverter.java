@@ -34,7 +34,7 @@ public class CurrencyConverter {
             System.out.println(amount + " " + currencyOrigin + " es igual a: " + result + " " + currencyDestiny);
 
         } catch (Exception e) {
-            System.out.println("Ocurrió un error al convertir la moneda: " + e.getMessage());
+            System.out.println("Ocurrió un error al intentar convertir la moneda: " + e.getMessage());
         }
     }
 }
