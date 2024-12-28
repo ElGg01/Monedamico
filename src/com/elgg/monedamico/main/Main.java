@@ -31,5 +31,6 @@ public class Main {
         }
 
         inputHandler.closeScanner();
+        System.out.println("¡Hasta luego!");
     }
 }
