@@ -1,36 +1,14 @@
 package com.elgg.monedamico.main;
 
-import com.elgg.monedamico.models.currency.CurrencyConverter;
-import com.elgg.monedamico.models.currency.CurrencyInputHandler;
-import io.github.cdimascio.dotenv.Dotenv;
-
 public class Main {
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.load();
-        String API_KEY = dotenv.get("API_KEY");
+        // Inicializar el manejador de entrada:
+        InputHandler inputHandler = new InputHandler();
 
-        CurrencyConverter converter = new CurrencyConverter(API_KEY);
-        CurrencyInputHandler inputHandler = new CurrencyInputHandler();
+        //Inicializar los códigos de monedas:
+        inputHandler.initializeCodes();
 
-        while (true) {
-            inputHandler.displayMenu();
-            String currencyOrigin = inputHandler.getCurrencyChoice("Escribe el tipo de divisa a convertir o escribe 'salir' para terminar: ");
-
-            if (inputHandler.isUserWantsToExit(currencyOrigin)) {
-                break;
-            }
-
-            double amount = inputHandler.getAmount(currencyOrigin);
-            String destinationCurrency = inputHandler.getCurrencyChoice("Escribe la divisa a la que quieres convertir: ");
-
-            if (inputHandler.isUserWantsToExit(destinationCurrency)) {
-                break;
-            }
-
-            converter.convertCurrency(currencyOrigin, amount, destinationCurrency);
-        }
-
-        inputHandler.closeScanner();
-        System.out.println("¡Hasta luego!");
+        //Loop para seleccionar una opción:
+        inputHandler.getMenuOption();
     }
 }
