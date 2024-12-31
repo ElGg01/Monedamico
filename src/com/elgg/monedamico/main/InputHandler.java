@@ -126,8 +126,8 @@ public class InputHandler {
                         codes.showAvailableCodes();
                         break;
                     case 3:
-                        System.out.println("Historial de conversiones:");
                         converter.showHistory();
+                        break;
                     default:
                         System.out.println("Por favor, ingresa un número de la lista.");
                 }
