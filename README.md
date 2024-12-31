@@ -43,16 +43,20 @@ Para obtener una copia de este proyecto pulsa en el botón verde **(<> Code)** y
 Al ejecutar el programa verás una pantalla como esta:
 
 ![img.png](src/resources/tuto1.png)
+
 En la cual podrás elegir varías opciones listadas a continuación:
 0. **Salir del programa:** Cierra el programa.
 
 ![tuto2.png](src/resources/tuto2.png)
+
 1. **Convertir moneda:** Permite elegir una moneda, un monto de esa moneda y la moneda de destino para convertir. Al final regresa el resultado de la conversión y la guarda en un historial, el cual es un archivo json.
+
 ![tuto3.png](src/resources/tuto3.png)
 
 2. **Ver monedas disponibles:** Muestra una lista de las monedas permitirdas por la API para convertir.
 
 ![tuto4.png](src/resources/tuto4.png)
+
 3. **Ver historial de conversiones:** Permite ver el historial de todas las conversiones que se han hecho, mismas que se guardan en un archivo json.
 
 ![tuto5.png](src/resources/tuto5.png)
